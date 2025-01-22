@@ -1,16 +1,14 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCountries } from '../../redux/reducer/country';
+import CountrySlider from './components/Slider';
+import CountryList from './components/CountryList';
 import './index.css';
 const Home = () => {
     const dispatch = useDispatch();
     // const { countries, status } = useSelector((state) => state.countries);
 
-    useEffect(() => {
-        if (status === 'idle') {
-            dispatch(fetchCountries());
-        }
-    }, [status, dispatch]);
+   
 
     return (
         <div className="home-page container-fluid">
@@ -32,21 +30,14 @@ const Home = () => {
             {/* Slider Section */}
             <section className="row my-4">
                 <div className="col-md-12">
-                    {/* <SliderComponent images={images} /> */}
+                    <CountrySlider />
                 </div>
             </section>
 
             {/* Country Display Section */}
             <section className="row my-4">
-                {/* <CountryDisplay countries={countries} /> */}
+                <CountryList/>
             </section>
-
-            {/* Load More Button */}
-            <div className="row my-4">
-                <div className="col text-center">
-                    <button className="btn btn-primary">Load More</button>
-                </div>
-            </div>
 
             {/* Footer Section */}
             <footer className="row py-4 border-top">
