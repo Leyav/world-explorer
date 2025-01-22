@@ -1,14 +1,9 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchCountries } from '../../redux/reducer/country';
+import React from 'react';
 import CountrySlider from './components/Slider';
 import CountryList from './components/CountryList';
 import './index.css';
-const Home = () => {
-    const dispatch = useDispatch();
-    // const { countries, status } = useSelector((state) => state.countries);
 
-   
+const Home = () => {
 
     return (
         <div className="home-page container-fluid">
