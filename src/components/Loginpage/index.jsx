@@ -31,20 +31,18 @@ const LoginPage = () => {
                 </p>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group controlId="formUsername">
-                        <Form.Label>Username</Form.Label>
                         <Form.Control
                             type="text"
-                            placeholder="Enter username"
+                            placeholder="Username or Email"
                             value={formData.email}
                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                             required
                         />
                     </Form.Group>
                     <Form.Group controlId="formPassword">
-                        <Form.Label>Password</Form.Label>
                         <Form.Control
                             type="password"
-                            placeholder="Enter password"
+                            placeholder="Password"
                             value={formData.password}
                             onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                             required
